@@ -1,25 +1,31 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "manifest_version": 2,
+
+  "name": "AJAY'S EXTENSION",
+  "description": "New tab - Chrome extension",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_title": "Magic about to happen"
+  },
+  "icons": {
+    "16": "people-1.png",
+    "48": "people-1.png",
+    "128": "people-1.png"
+  },
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts" : [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+        "matches" : [ "http://*/*" ],
+        "css": ["/static/css/main.css"],
+        "js": ["contentScript.js","/static/js/main.js"]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "content_security_policy": "script-src 'self' 'sha256-sI/kSbePww5Nvz4kZ7CKiGTFFJrmPe61CdT3ouc14Hw='; object-src 'self'",
+  "permissions": ["tabs", "topSites", "bookmarks"]
 }

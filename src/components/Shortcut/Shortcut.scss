@@ -1,0 +1,14 @@
+.shortcut-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(221, 28, 28, 0.651);
+  border-radius: 50%;
+  margin: 5px;
+  height: calc(100% - 10px);
+  min-width: 4rem;
+
+  h1 {
+    font-family: sans-serif;
+  }
+}

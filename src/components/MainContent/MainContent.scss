@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.main-content {
+  min-height: $main-content-height;
+  margin-top: $main-content-margin;
+  margin-bottom: $main-content-margin;
+  display: flex;
+  justify-content: space-evenly;
+}

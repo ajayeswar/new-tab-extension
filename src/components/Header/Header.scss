@@ -1,0 +1,16 @@
+@import "../../App.scss";
+
+.header {
+  width: 90vw;
+  height: $header-height;
+  background: white;
+  text-align: center;
+  margin: auto;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: $header-top-margin;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  justify-content: space-evenly;
+}

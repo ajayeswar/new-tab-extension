@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+li,
+ol,
+span,
+p {
+  cursor: default;
+}
+
+$header-height: 9vh;
+$header-top-margin: 1vh;
+$main-content-height: 25vh;
+$main-content-margin: 2vh;

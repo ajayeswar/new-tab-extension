@@ -1,0 +1,27 @@
+.word-section {
+  background: rgba(43, 39, 39, 0.7);
+  border-radius: 20px;
+  margin: 1rem;
+  width: 33%;
+
+  h2 {
+    font-family: cursive;
+    color: greenyellow;
+  }
+  .word-definition {
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      padding: 0 10px;
+      margin: 0;
+      font-size: 13px;
+      font-family: monospace;
+      color: white;
+    }
+    li:before {
+      content: "\00BB";
+      margin-right: 6px;
+    }
+  }
+}
