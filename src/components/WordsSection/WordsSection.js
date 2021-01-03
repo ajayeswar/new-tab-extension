@@ -12,16 +12,16 @@ const WordsSection = (props) => {
     API()
       .wordsApi(rword.generate())
       .then((res) => {
-        console.log("definition", res);
         setWord(res.word);
         setMessageDefinitions(res.definition || []);
       });
   }, []);
+
   return (
     <div className="word-section" key={props.id}>
       <h2>{word}</h2>
       {messageDefinitions.map((messageDefinition) => (
-        <div key={props.id + " " + props.id}>
+        <div key={props.id}>
           <ol className="word-definition">
             <li>{messageDefinition.definitions[0].definition}</li>
             {messageDefinition.definitions[1] ? (

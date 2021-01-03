@@ -1,6 +1,7 @@
 /* global chrome */
+console.log("contenttt script", chrome);
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log(message);
-  return true;
-});
+// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+//   console.log("inside content script", message);
+//   return { message: "bye" };
+// });

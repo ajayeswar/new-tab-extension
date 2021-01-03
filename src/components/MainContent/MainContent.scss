@@ -6,4 +6,9 @@
   margin-bottom: $main-content-margin;
   display: flex;
   justify-content: space-evenly;
+  padding: 0 4%;
+
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
 }

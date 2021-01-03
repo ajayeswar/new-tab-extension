@@ -1,14 +1,42 @@
 .shortcut-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(221, 28, 28, 0.651);
-  border-radius: 50%;
-  margin: 5px;
-  height: calc(100% - 10px);
-  min-width: 4rem;
-
-  h1 {
+  overflow-x: scroll;
+  a {
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #403a3a94;
+    color: azure;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50%;
+    margin: 5px;
+    height: calc(100% - 10px);
+    min-width: 4rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    h3{
+      display: none;
+    }
   }
+  a:hover{
+    background: tomato;
+    min-width: unset;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: min-width .8s ease,background .8s ease;
+    h1{
+      display: none;
+    }
+    h3{
+      display: block;
+      white-space: nowrap;
+      padding: 0.6em 0;
+      margin-left: 5px;
+    }
+  }
+}
+.shortcut-wrapper::-webkit-scrollbar {
+  display: none;
 }

@@ -1,11 +1,17 @@
 {
   "manifest_version": 2,
 
-  "name": "AJAY'S EXTENSION",
-  "description": "New tab - Chrome extension",
+  "name": "ROOKIE NEW TAB EXTENSION",
+  "description": "ROOKIE NEW TAB EXTENSION",
   "version": "0.0.1",
   "browser_action": {
-    "default_title": "Magic about to happen"
+    "default_title": "ROOKIE NEW TAB EXTENSION",
+    "default_icon": {
+      "16": "people-1.png",
+      "32": "people-1.png",
+      "48": "people-1.png",
+      "64": "people-1.png"
+   }
   },
   "icons": {
     "16": "people-1.png",
@@ -17,15 +23,20 @@
     "newtab": "index.html"
   },
   "background": {
+    "persistent": true,
     "scripts": ["background.js"]
   },
   "content_scripts" : [
     {
-        "matches" : [ "http://*/*" ],
-        "css": ["/static/css/main.css"],
-        "js": ["contentScript.js","/static/js/main.js"]
+        "matches" : [ "<all_urls>" ],
+        "js": ["contentScript.js","/static/js/2.js", "/static/js/3.js"],
+        "run_at": "document_end"
     }
   ],
-  "content_security_policy": "script-src 'self' 'sha256-sI/kSbePww5Nvz4kZ7CKiGTFFJrmPe61CdT3ouc14Hw='; object-src 'self'",
-  "permissions": ["tabs", "topSites", "bookmarks"]
+  "web_accessible_resources":[
+    "contentScript.js"
+ ], 
+  "content_security_policy": "script-src 'self' 'sha256-zsY8slItr1UXNrHaMiKzQxEqIMjRDrGN9bJnpePocH4='; object-src 'self'",
+  "permissions": ["tabs","topSites", "bookmarks", "activeTab", "cookies", "*://*.localhost/*", "notifications", "storage", "downloads"]
+
 }
